@@ -27,9 +27,9 @@ jobs:
         key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
 
     - name: Setup TFLint
-      uses: terraform-linters/setup-tflint@v1
+      uses: terraform-linters/setup-tflint@v2
       with:
-        tflint_version: v0.29.0
+        tflint_version: latest
 
     - name: Show TFLint version
       run: tflint --version
